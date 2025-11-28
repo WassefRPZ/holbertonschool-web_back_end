@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 """
 you’ve written and write an async routine called
 wait_n that takes in 2 int arguments
