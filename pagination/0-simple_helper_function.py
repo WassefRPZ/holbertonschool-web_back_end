@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 
-
 def index_range(page, page_size):
     """
     Calculate the start and end indexes for pagination.
@@ -8,6 +7,6 @@ def index_range(page, page_size):
     page_size: number of items per page
     Returns a tuple (start, end)
     """
-    start = (page -1) * page_size 
+    start = (page - 1) * page_size
     end = page * page_size
     return start, end
