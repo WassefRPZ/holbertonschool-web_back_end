@@ -5,7 +5,7 @@ import math
 from typing import List
 
 
-def index_range(page, page_size):
+def index_range(page, page_size) -> tuple:
     """
     Calculate the start and end indexes for pagination.
     page: current page number (1-indexed)
