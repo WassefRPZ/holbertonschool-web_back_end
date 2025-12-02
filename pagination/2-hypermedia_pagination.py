@@ -11,9 +11,10 @@ def index_range(page, page_size):
     page_size: number of items per page
     Returns a tuple (start, end)
     """
-    start = (page -1) * page_size 
+    start = (page - 1) * page_size
     end = page * page_size
     return start, end
+
 
 class Server:
     """Server class to paginate a database of popular baby names.
@@ -35,14 +36,16 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        assert isinstance(page, int) and page > 0 
-        assert isinstance(page_size, int) and page_size > 0 
-            
+        """function for pagination."""
+        assert isinstance(page, int) and page > 0
+        assert isinstance(page_size, int) and page_size > 0
+
         data = self.dataset()
         start, end = index_range(page, page_size)
         return data[start:end]
+
     def get_hyper(self, page: int = 1, page_size: int = 10) -> dict:
-            
+        """function for pagination."""
         data = self.get_page(page, page_size)
         page_size_res = len(data)
         dataset = self.dataset()
@@ -53,7 +56,7 @@ class Server:
         else:
             next_page = None
         if page > 1:
-            prev_page = page - 1 
+            prev_page = page - 1
         else:
             prev_page = None
         return {"page_size": page_size_res,
@@ -62,4 +65,4 @@ class Server:
                 "next_page": next_page,
                 "prev_page": prev_page,
                 "total_pages": total_page,
-            }
+                }
