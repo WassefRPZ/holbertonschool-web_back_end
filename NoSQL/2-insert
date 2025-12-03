@@ -1,2 +1,2 @@
-// INSERT 
-db.school.insert({name:"holberton school"})
+// INSERT
+db.school.insert({name:"Holberton school"})
