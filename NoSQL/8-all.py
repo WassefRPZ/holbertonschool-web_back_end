@@ -1,7 +1,6 @@
-#!/usr/bin/python3
-from pymongo import MongoClient
+#!/usr/bin/pytho
 """first pymongo code"""
 
 def list_all(mongo_collection):
     """list"""
-    return list(mongo_collection.find())
+    return mongo_collection.find()
