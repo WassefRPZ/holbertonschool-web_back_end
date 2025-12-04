@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+"""first code in a MongoDB collection"""
 def list_all(mongo_collection):
-    """List all documents in a MongoDB collection"""
+    """List all documents"""
     return mongo_collection.find()
