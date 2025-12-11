@@ -24,8 +24,8 @@ export default class Pricing{
         }
         this._currency = value;
     }
-    displayFullCurrency() {
-        return `${this.amount} ${this.currency.name}(${this.currency.code})`;
+    displayFullPrice() {
+        return `${this.amount} ${this.currency.name} (${this.currency.code})`;
     }
     static convertPrice(amount, conversionRate){
         if (typeof amount !== "number" || typeof conversionRate !== "number"){
